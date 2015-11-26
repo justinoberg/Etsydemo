@@ -9,9 +9,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.3.5'
-gem "paperclip", "~> 4.3"
+gem 'paperclip'
 gem 'aws-sdk'
-gem "figaro"
+gem 'figaro'
 
 group :production do 
 	gem 'pg'
