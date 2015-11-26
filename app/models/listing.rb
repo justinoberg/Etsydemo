@@ -3,8 +3,8 @@ class Listing < ActiveRecord::Base
   	 	has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "noimage.jpg"
   else
  		has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "noimage.jpg",
-    					  :storage => :dropbox,
-      					  :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+    					  :storage => :s3,
+      					  :s3_credentials => Rails.root.join("config/s3.yml"),
       					  :path => ":style/:id_:filename"
   end
 

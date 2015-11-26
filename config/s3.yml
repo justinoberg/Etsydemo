@@ -1,0 +1,3 @@
+bucket: "etsydemo-justinoberg"
+access_key_id: "AKIAJSU7F2E56KJB3S6A"
+secret_access_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
