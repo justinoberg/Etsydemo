@@ -4,7 +4,11 @@ class Listing < ActiveRecord::Base
   else
  		has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "noimage.jpg",
     					  :storage => :s3,
-      					  :s3_credentials => Rails.root.join("config/s3.yml"),
+      					  :s3_credentials => {
+      					  	:bucket => ENV['ETSYDEMO-JUSTINOBERG'],
+   							:access_key_id => ENV['AKIAJSU7F2E56KJB3S6A'],
+    						:secret_access_key => ENV['FCN6uInYlWbgehzjpHnGATbfKH6XDfqX6q6kLr']
+      					  }
       					  :path => ":style/:id_:filename"
   end
 
